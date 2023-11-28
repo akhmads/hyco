@@ -23,6 +23,7 @@ echo Cast::number('12A00B');
 
 ## Class available
 
-|Class|Description|
-|Cast::number()|convert string to number|
-Cast::currency()|convert string to number with format|
+| Class            | Description                          |
+| ---------------- | ------------------------------------ |
+| Cast::number()   | convert string to number             |
+| Cast::currency() | convert string to number with format |
