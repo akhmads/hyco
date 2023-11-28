@@ -13,6 +13,7 @@ composer require akhmads/hyco:dev-main
 On your php code
 
 ```php
+<?php
 require_once 'vendor/autoload.php';
 
 use Akhmads\Hyco\Cast;
