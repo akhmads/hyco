@@ -1,4 +1,5 @@
 # Hyco
+
 Common PHP library for hyco
 
 ## Usage
@@ -6,11 +7,15 @@ Common PHP library for hyco
 Install via composer
 
 ```
-composer require akhmads/hyco:dev-master
+composer require akhmads/hyco:dev-main
 ```
 
 On your php code
 
 ```php
 require_once 'vendor/autoload.php';
+
+use Akhmads\Hyco\Cast;
+
+echo Cast::number('12A00B');
 ```
