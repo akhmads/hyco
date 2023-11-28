@@ -11,10 +11,10 @@ class Cast {
         return preg_replace('#[^0-9\.]#i', '', $num);
     }
 
-    public static function currency( $num, $decimal = 2 )
+    public static function currency( $num, $decimal = 2, $separator = '' )
     {
         if(empty($num)) $num = 0;
         $num = self::number($num);
-        return number_format($num, $decimal, '.', '');
+        return number_format($num, $decimal, '.', $separator);
     }
 }
