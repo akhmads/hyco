@@ -10,12 +10,6 @@ Open terminal or command prompt and go to your laravel project
 composer require akhmads/hyco:dev-main
 ```
 
-Run the artisan command
-
-```
-php artisan hyco:install
-```
-
 Open `tailwind.config.js` add following code
 
 ```

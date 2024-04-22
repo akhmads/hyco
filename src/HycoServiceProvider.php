@@ -4,7 +4,6 @@ namespace Akhmads\Hyco;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Livewire\Livewire;
 use Akhmads\Hyco\Console\Commands\HycoInstallCommand;
 use Akhmads\Hyco\Console\Commands\HycoUninstallCommand;
 use Akhmads\Hyco\View\Components\HycoLayout;
@@ -35,9 +34,6 @@ class HycoServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'hyco');
-
         $this->bootComponents();
 
         if ($this->app->runningInConsole()) {
@@ -62,8 +58,5 @@ class HycoServiceProvider extends ServiceProvider
         Blade::component('hc-select', Select::class);
         Blade::component('hc-button', Button::class);
         Blade::component('hc-table', Table::class);
-
-        Livewire::component('hyco::hello', \Akhmads\Hyco\Livewire\Hello::class);
-        Livewire::component('hyco::counter', \Akhmads\Hyco\Livewire\Counter::class);
     }
 }
