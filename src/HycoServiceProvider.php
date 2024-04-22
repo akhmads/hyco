@@ -8,11 +8,13 @@ use Livewire\Livewire;
 use Akhmads\Hyco\Console\Commands\HycoInstallCommand;
 use Akhmads\Hyco\Console\Commands\HycoUninstallCommand;
 use Akhmads\Hyco\View\Components\HycoLayout;
+use Akhmads\Hyco\View\Components\Toast;
 use Akhmads\Hyco\View\Components\InputLabel;
 use Akhmads\Hyco\View\Components\InputError;
 use Akhmads\Hyco\View\Components\Input;
 use Akhmads\Hyco\View\Components\Select;
 use Akhmads\Hyco\View\Components\Button;
+use Akhmads\Hyco\View\Components\Table;
 
 class HycoServiceProvider extends ServiceProvider
 {
@@ -53,11 +55,13 @@ class HycoServiceProvider extends ServiceProvider
     {
         Blade::component('BladeUI\Icons\Components\Icon', 'svg');
         Blade::component('hyco-layout', HycoLayout::class);
+        Blade::component('hc-toast', Toast::class);
         Blade::component('hc-input-label', InputLabel::class);
         Blade::component('hc-input-error', InputError::class);
         Blade::component('hc-input', Input::class);
         Blade::component('hc-select', Select::class);
         Blade::component('hc-button', Button::class);
+        Blade::component('hc-table', Table::class);
 
         Livewire::component('hyco::hello', \Akhmads\Hyco\Livewire\Hello::class);
         Livewire::component('hyco::counter', \Akhmads\Hyco\Livewire\Counter::class);
