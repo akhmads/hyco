@@ -13,6 +13,7 @@ class Input extends Component
      */
     public function __construct(
         public ?string $label = null,
+        public ?string $wrap = "mb-3",
         public ?string $disabled = null
     ) {}
 
@@ -30,16 +31,16 @@ class Input extends Component
     public function render(): View|Closure|string
     {
         return <<<'HTML'
+        <div class="{{ $wrap }}">
             <!-- LABEL -->
             @unless(empty($label))
             <x-hc-input-label :value="$label" class="mb-1"></x-hc-input-label>
             @endunless
-
             <!-- INPUT -->
             <input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}>
-
             <!-- ERROR -->
             <x-hc-input-error :messages="$errors->get($modelName())" class="mt-1"></x-hc-input-error>
+        </div>
         HTML;
     }
 }
