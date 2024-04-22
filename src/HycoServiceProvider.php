@@ -51,6 +51,7 @@ class HycoServiceProvider extends ServiceProvider
 
     public function bootComponents()
     {
+        Blade::component('BladeUI\Icons\Components\Icon', 'svg');
         Blade::component('hyco-layout', HycoLayout::class);
         Blade::component('hc-input-label', InputLabel::class);
         Blade::component('hc-input-error', InputError::class);
