@@ -39,9 +39,9 @@ class Table extends Component
                 @endisset
             </div>
 
-            <div class="max-w-full bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-slate-900 dark:border-gray-700 overflow-x-auto overflow-y-hidden">
+            <div class="max-w-full bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-900 dark:border-gray-700 overflow-x-auto overflow-y-hidden">
                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                    <thead class="bg-gray-50 dark:bg-slate-800">
+                    <thead class="text-sm bg-gray-50 dark:bg-gray-800">
 
                     {{ $header ?? '' }}
 

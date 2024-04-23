@@ -37,7 +37,7 @@ class Textarea extends Component
             <x-hc-input-label :value="$label" class="mb-1"></x-hc-input-label>
             @endunless
             <!-- INPUT -->
-            <input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}>
+            <textarea {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}></textarea>
             <!-- ERROR -->
             <x-hc-input-error :messages="$errors->get($modelName())" class="mt-1"></x-hc-input-error>
         </div>
