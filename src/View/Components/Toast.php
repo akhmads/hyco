@@ -38,7 +38,7 @@ class Toast extends Component
     {
         return <<<'HTML'
         @if(session()->has('toast_message'))
-        <div onclick="this.remove()" x-init="setTimeout(() => $el.remove(), 50000)" class="{{ $colorTheme() }} w-72 cursor-pointer fixed top-5 right-5 z-[9999] inline-flex item-center justify-between text-base px-5 py-4 rounded shadow-lg">
+        <div onclick="this.remove()" x-init="setTimeout(() => $el.remove(), 5000)" class="{{ $colorTheme() }} w-72 cursor-pointer fixed top-5 right-5 z-[9999] inline-flex item-center justify-between text-base px-5 py-4 rounded shadow-lg">
             <div class="grow">
                 <!-- <div class="f-full font-semibold mb-2">{{ __('Success') }}</div> -->
                 <div>{{ session('toast_message') }}</div>
